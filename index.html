@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club 21 - El camino al amanecer</title>
+    <link rel="icon" type="image/png" href="logo-club21.png">
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        :root {
+            --verde-nilo: #a3d9c9;
+            --azul-diafano: #bfe3f2;
+            --rojizo-claro: #f5c6bc;
+            --blanco-cristal: rgba(255,255,255,0.45);
+            --borde-cristal: rgba(255,255,255,0.6);
+            --azul-noche: #102a43;
+            --texto-cuerpo: #2d3748;
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body {
+            font-family: sans-serif;
+            color: var(--texto-cuerpo);
+            min-height: 100vh;
+            background-color: var(--azul-diafano);
+            background-image: 
+                radial-gradient(at 0% 0%, var(--verde-nilo) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, var(--azul-diafano) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, var(--rojizo-claro) 0px, transparent 60%);
+            background-attachment: fixed;
+            background-size: cover;
+            scroll-behavior: smooth;
+        }
+
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 60px 20px; 
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .brand-logo {
+            height: 54px;
+            width: auto;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .hero { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 40px; 
+            margin-bottom: 50px; 
+            margin-top: 20px; 
+        }
+
+        .hero-content { flex: 1; }
+        .hero-content h1 { font-size: 2.5rem; color: var(--azul-noche); margin-bottom: 20px; font-weight: 800; }
+        .hero-content p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; }
+
+        .hero-image { flex: 1; text-align: center; }
+        .hero-image img { width: 100%; max-width: 400px; border-radius: 16px; border: 4px solid var(--borde-cristal); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+        .glass-card { 
+            background: var(--blanco-cristal); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px); 
+            border: 1px solid var(--borde-cristal); 
+            border-radius: 20px; 
+            padding: 35px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.02); 
+            margin-bottom: 40px; 
+        }
+
+        .glass-card h2 { font-size: 1.8rem; color: var(--azul-noche); margin-bottom: 15px; }
+        .glass-card p { font-size: 1.05rem; line-height: 1.6; margin-bottom: 15px; }
+
+        .gideon-panel { 
+            background: var(--azul-noche); 
+            color: white; 
+            border-radius: 24px; 
+            padding: 40px; 
+            text-align: center; 
+            margin-bottom: 40px; 
+        }
+
+        .gideon-panel h2 { color: var(--azul-diafano); margin-bottom: 15px; }
+
+        .voice-wave { 
+            display: flex; 
+            justify-content: center; 
+            gap: 6px; 
+            margin: 25px 0; 
+            height: 50px; 
+            align-items: center; 
+        }
+
+        .wave-bar { 
+            width: 5px; 
+            height: 10px; 
+            background: var(--verde-nilo); 
+            border-radius: 4px; 
+            transition: height 0.12s ease; 
+        }
+
+        .gideon-status { font-family: monospace; color: var(--verde-nilo); margin-bottom: 10px; font-size: 0.95rem; }
+        .gideon-transcript { font-size: 0.95rem; color: var(--azul-diafano); min-height: 24px; margin-bottom: 20px; font-style: italic; }
+
+        .btn { 
+            display: inline-block; 
+            padding: 12px 28px; 
+            background: var(--azul-noche); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 10px; 
+            font-weight: 600; 
+            text-align: center; 
+            cursor: pointer; 
+            border: none; 
+            transition: transform 0.15s ease, background 0.2s ease;
+        }
+
+        .btn:hover { background: #1e252b; transform: translateY(-1px); }
+        .btn-gideon { background: var(--verde-nilo); color: var(--azul-noche); margin: 5px; }
+        .btn-gideon:hover { background: #8ccbb8; }
+        .btn-mic { background: var(--rojizo-claro); color: var(--azul-noche); margin: 5px; }
+        .btn-mic:hover { background: #eeb3a7; }
+
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .mini-card { 
+            background: var(--blanco-cristal); 
+            border: 1px solid var(--borde-cristal); 
+            border-radius: 16px; 
+            padding: 25px; 
+        }
+
+        .mini-card h3 { color: var(--azul-noche); margin-bottom: 10px; }
+
+        @media (max-width: 768px) { 
+            .hero { flex-direction: column; text-align: center; } 
+            .brand-header { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="brand-header">
+        <img src="logo-club21.png" alt="Logo Club 21" class="brand-logo" onerror="this.style.display='none'">
+        <h2 style="color:var(--azul-noche); letter-spacing: 1px;">CLUB 21</h2>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Evolución Tecnológica con Propósito Humano.</h1>
+            <p>Creamos un nuevo orden de herramientas digitales avanzadas al alcance de todos. Soluciones de inteligencia artificial persistente y optimización estratégica diseñadas para transformar procesos complejos en activos rentables.</p>
+            <a href="#gideon-sec" class="btn">Interactuar con Gideon</a>
+        </div>
+        <div class="hero-image">
+            <img src="desarrollador.jpg" alt="Desarrollador">
+        </div>
+    </section>
+
+    <!-- SECCIÓN INFORMACIÓN -->
+    <section class="glass-card">
+        <h2>Sistemas de Memoria Continua: Agentes de IA que no olvidan.</h2>
+        <p>El gran defecto de la inteligencia artificial convencional es la desconexión: al cerrar la sesión, la experiencia se desvanece. En Club 21 rompemos ese límite mediante una arquitectura de datos horizontal que dota a nuestros agentes de una memoria a largo plazo real.</p>
+        <p>Diseñamos asistentes capaces de recordar directrices complejas, bases documentales completas e historiales compartidos. Una infraestructura robusta que evoluciona junto a vos.</p>
+    </section>
+
+    <!-- CONSOLA DE GIDEON -->
+    <section class="gideon-panel" id="gideon-sec">
+        <h2>Consola de Comando Interactiva</h2>
+        <p>Experimenta el soporte por voz avanzado de Gideon. Arquitectura agencial diseñada para resolver directrices complejas mediante diálogo fluido y contextual.</p>
+        <div class="voice-wave" id="wave-box">
+            <div class="wave-bar" id="b1"></div>
+            <div class="wave-bar" id="b2"></div>
+            <div class="wave-bar" id="b3"></div>
+            <div class="wave-bar" id="b4"></div>
+            <div class="wave-bar" id="b5"></div>
+        </div>
+        <div class="gideon-status" id="gideon-txt">● AGENTE ONLINE // CONEXIÓN ESTABLE POR VOZ</div>
+        <div class="gideon-transcript" id="gideon-sub">Presiona "Iniciar Canal de Voz" para activar el enlace de audio.</div>
+        <div>
+            <button class="btn btn-gideon" id="btn-audio" onclick="hablarGideon()">Iniciar Canal de Voz</button>
+            <button class="btn btn-mic" id="btn-mic" onclick="escucharUsuario()">Hablar con Gideon</button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section class="services-grid">
+        <div class="mini-card">
+            <h3>Soluciones a Medida & Integración PyME</h3>
+            <p>Desarrollo e implementación de agentes con memoria a largo plazo adaptados por completo al ecosistema digital de tu empresa.</p>
+            <a href="#formulario-b2b" class="btn" style="width:100%; margin-top:15px; text-decoration:none;">Cotizar Proyecto</a>
+        </div>
+        <div class="mini-card">
+            <h3>Consultoría y Células de Desarrollo</h3>
+            <p>Ofrecemos nuestro equipo técnico especializado para el diseño de arquitecturas de IA y soluciones de software llave en mano.</p>
+            <a href="#formulario-b2b" class="btn" style="width:100%; margin-top:15px; text-decoration:none;">Contratar Célula</a>
+        </div>
+    </section>
+
+    <!-- FORMULARIO COMERCIAL CONECTADO A SUPABASE -->
+    <section class="glass-card" id="formulario-b2b" style="margin-top:40px;">
+        <h2 style="text-align:center; margin-bottom:20px;">Iniciar Consulta Comercial</h2>
+        
+        <form id="formularioRegistro" style="display:flex; flex-direction:column; gap:15px;">
+            <input type="text" id="inputNombre" placeholder="Tu Nombre" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
+            <input type="email" id="inputCorreo" placeholder="Correo Electrónico de la Empresa" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
+            <input type="text" id="inputPyme" placeholder="Nombre de la PyME / Organización" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
