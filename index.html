@@ -15,9 +15,7 @@
             --azul-noche: #102a43;
             --texto-cuerpo: #2d3748;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: sans-serif;
             color: var(--texto-cuerpo);
@@ -31,133 +29,42 @@
             background-size: cover;
             scroll-behavior: smooth;
         }
-
         .container { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
-
-        .brand-header {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 35px;
-        }
-
-        .brand-logo {
-            height: 95px;
-            width: auto;
-            object-fit: contain;
-            mix-blend-mode: multiply;
-        }
-
-        .hero { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            gap: 40px; 
-            margin-bottom: 50px; 
-            margin-top: 15px; 
-        }
-
+        .brand-header { display: flex; align-items: center; gap: 18px; margin-bottom: 35px; }
+        .brand-logo { height: 95px; width: auto; object-fit: contain; mix-blend-mode: multiply; }
+        .hero { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-bottom: 50px; margin-top: 15px; }
         .hero-content { flex: 1; }
         .hero-content h1 { font-size: 2.5rem; color: var(--azul-noche); margin-bottom: 20px; font-weight: 800; }
         .hero-content p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; }
-
         .hero-image { flex: 1; text-align: center; }
         .hero-image img { width: 100%; max-width: 400px; border-radius: 16px; border: 4px solid var(--borde-cristal); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-        .glass-card { 
-            background: var(--blanco-cristal); 
-            backdrop-filter: blur(10px); 
-            -webkit-backdrop-filter: blur(10px); 
-            border: 1px solid var(--borde-cristal); 
-            border-radius: 20px; 
-            padding: 35px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.02); 
-            margin-bottom: 40px; 
-        }
-
+        .glass-card { background: var(--blanco-cristal); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--borde-cristal); border-radius: 20px; padding: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.02); margin-bottom: 40px; }
         .glass-card h2 { font-size: 1.8rem; color: var(--azul-noche); margin-bottom: 15px; }
         .glass-card p { font-size: 1.05rem; line-height: 1.6; margin-bottom: 15px; }
-
-        .gideon-panel { 
-            background: var(--azul-noche); 
-            color: white; 
-            border-radius: 24px; 
-            padding: 40px; 
-            text-align: center; 
-            margin-bottom: 40px; 
-        }
-
+        .gideon-panel { background: var(--azul-noche); color: white; border-radius: 24px; padding: 40px; text-align: center; margin-bottom: 40px; }
         .gideon-panel h2 { color: var(--azul-diafano); margin-bottom: 15px; }
-
-        .voice-wave { 
-            display: flex; 
-            justify-content: center; 
-            gap: 6px; 
-            margin: 25px 0; 
-            height: 50px; 
-            align-items: center; 
-        }
-
-        .wave-bar { 
-            width: 5px; 
-            height: 10px; 
-            background: var(--verde-nilo); 
-            border-radius: 4px; 
-            transition: height 0.12s ease; 
-        }
-
+        .voice-wave { display: flex; justify-content: center; gap: 6px; margin: 25px 0; height: 50px; align-items: center; }
+        .wave-bar { width: 5px; height: 10px; background: var(--verde-nilo); border-radius: 4px; transition: height 0.12s ease; }
         .gideon-status { font-family: monospace; color: var(--verde-nilo); margin-bottom: 10px; font-size: 0.95rem; }
         .gideon-transcript { font-size: 0.95rem; color: var(--azul-diafano); min-height: 24px; margin-bottom: 20px; font-style: italic; }
-
-        .btn { 
-            display: inline-block; 
-            padding: 12px 28px; 
-            background: var(--azul-noche); 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 10px; 
-            font-weight: 600; 
-            text-align: center; 
-            cursor: pointer; 
-            border: none; 
-            transition: transform 0.15s ease, background 0.2s ease;
-        }
-
+        .btn { display: inline-block; padding: 12px 28px; background: var(--azul-noche); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; text-align: center; cursor: pointer; border: none; transition: transform 0.15s ease, background 0.2s ease; }
         .btn:hover { background: #1e252b; transform: translateY(-1px); }
         .btn-gideon { background: var(--verde-nilo); color: var(--azul-noche); margin: 5px; }
         .btn-gideon:hover { background: #8ccbb8; }
         .btn-mic { background: var(--rojizo-claro); color: var(--azul-noche); margin: 5px; }
         .btn-mic:hover { background: #eeb3a7; }
-
-        .services-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-        }
-
-        .mini-card { 
-            background: var(--blanco-cristal); 
-            border: 1px solid var(--borde-cristal); 
-            border-radius: 16px; 
-            padding: 25px; 
-        }
-
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .mini-card { background: var(--blanco-cristal); border: 1px solid var(--borde-cristal); border-radius: 16px; padding: 25px; }
         .mini-card h3 { color: var(--azul-noche); margin-bottom: 10px; }
-
-        @media (max-width: 768px) { 
-            .hero { flex-direction: column; text-align: center; } 
-            .brand-header { justify-content: center; }
-        }
+        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .brand-header { justify-content: center; } }
     </style>
 </head>
 <body>
-
 <div class="container">
     <header class="brand-header">
         <img src="logo-club21.png" alt="Logo Club 21" class="brand-logo" onerror="this.style.display='none'">
         <h2 style="color:var(--azul-noche); letter-spacing: 1.5px; font-size: 1.8rem;">CLUB 21</h2>
     </header>
-
     <section class="hero">
         <div class="hero-content">
             <h1>Evolución Tecnológica con Propósito Humano.</h1>
@@ -168,13 +75,11 @@
             <img src="desarrollador.jpg" alt="Desarrollador">
         </div>
     </section>
-
     <section class="glass-card">
         <h2>Sistemas de Memoria Continua: Agentes de IA que no olvidan.</h2>
         <p>El gran defecto de la inteligencia artificial convencional es la desconexión: al cerrar la sesión, la experiencia se desvanece. En Club 21 rompemos ese límite mediante una arquitectura de datos horizontal que dota a nuestros agentes de una memoria a largo plazo real.</p>
         <p>Diseñamos asistentes capaces de recordar directrices complejas, bases documentales completas e historiales compartidos. Una infraestructura robusta que evoluciona junto a vos.</p>
     </section>
-
     <section class="gideon-panel" id="gideon-sec">
         <h2>Consola de Comando Interactiva</h2>
         <p>Experimenta el soporte por voz avanzado de Gideon. Arquitectura agencial diseñada para resolver directrices complejas mediante diálogo fluido y contextual.</p>
@@ -192,7 +97,6 @@
             <button type="button" class="btn btn-mic" id="btn-mic" onclick="escucharUsuario()">Hablar con Gideon</button>
         </div>
     </section>
-
     <section class="services-grid">
         <div class="mini-card">
             <h3>Soluciones a Medida & Integración PyME</h3>
@@ -205,7 +109,6 @@
             <a href="#formulario-b2b" class="btn" style="width:100%; margin-top:15px; text-decoration:none;">Contratar Célula</a>
         </div>
     </section>
-
     <section class="glass-card" id="formulario-b2b" style="margin-top:40px;">
         <h2 style="text-align:center; margin-bottom:20px;">Iniciar Consulta Comercial</h2>
         <form id="formularioRegistro" style="display:flex; flex-direction:column; gap:15px;">
@@ -213,3 +116,27 @@
             <input type="email" id="inputCorreo" placeholder="Correo Electrónico de la Empresa" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
             <input type="text" id="inputPyme" placeholder="Nombre de la PyME / Organización" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
             <textarea id="inputMensaje" placeholder="Cuéntanos brevemente sobre tu proyecto o necesidad técnica..." rows="4" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none; resize:none; font-family:sans-serif;"></textarea>
+            <button type="submit" id="btnEnviar" class="btn" style="background:var(--azul-noche); color:white;">Enviar Requerimiento</button>
+        </form>
+        <p id="estadoFormulario" style="text-align:center; margin-top:15px; font-weight:600; color:var(--azul-noche);"></p>
+    </section>
+</div>
+<script>
+const SUPABASE_URL = "https://supabase.co";
+const SUPABASE_KEY = "PEGA_AQUI_TU_ANON_KEY";
+let intervaloWave;
+
+function iniciarOndas() {
+    detenerOndas();
+    intervaloWave = setInterval(() => {
+        for (let i = 1; i <= 5; i++) {
+            const barra = document.getElementById("b" + i);
+            if (barra) barra.style.height = (Math.floor(Math.random() * 36) + 8) + "px";
+        }
+    }, 120);
+}
+
+function detenerOndas() {
+    clearInterval(intervaloWave);
+    for (let i = 1; i <= 5; i++) {
+        const barra = document.getElementById("b" + i);
