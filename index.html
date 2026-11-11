@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club 21 - El camino al amanecer</title>
     <link rel="icon" type="image/png" href="logo-club21.png">
-    <script src="https://jsdelivr.net"></script>
     <style>
         :root {
             --verde-nilo: #a3d9c9;
@@ -17,11 +16,7 @@
             --texto-cuerpo: #2d3748;
         }
 
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: sans-serif;
@@ -37,11 +32,7 @@
             scroll-behavior: smooth;
         }
 
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 50px 20px; 
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
 
         .brand-header {
             display: flex;
@@ -217,8 +208,8 @@
 
     <section class="glass-card" id="formulario-b2b" style="margin-top:40px;">
         <h2 style="text-align:center; margin-bottom:20px;">Iniciar Consulta Comercial</h2>
-        
         <form id="formularioRegistro" style="display:flex; flex-direction:column; gap:15px;">
             <input type="text" id="inputNombre" placeholder="Tu Nombre" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
             <input type="email" id="inputCorreo" placeholder="Correo Electrónico de la Empresa" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
             <input type="text" id="inputPyme" placeholder="Nombre de la PyME / Organización" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none;">
+            <textarea id="inputMensaje" placeholder="Cuéntanos brevemente sobre tu proyecto o necesidad técnica..." rows="4" required style="padding:12px; border-radius:8px; border:1px solid var(--borde-cristal); background:rgba(255,255,255,0.6); outline:none; resize:none; font-family:sans-serif;"></textarea>
