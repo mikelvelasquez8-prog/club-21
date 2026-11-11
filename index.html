@@ -40,21 +40,21 @@
         .container { 
             max-width: 1100px; 
             margin: 0 auto; 
-            padding: 60px 20px; 
+            padding: 50px 20px; 
         }
 
         .brand-header {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 40px;
+            gap: 18px;
+            margin-bottom: 35px;
         }
 
         .brand-logo {
-            height: 54px;
+            height: 95px;
             width: auto;
-            border-radius: 10px;
             object-fit: contain;
+            mix-blend-mode: multiply;
         }
 
         .hero { 
@@ -63,7 +63,7 @@
             justify-content: space-between; 
             gap: 40px; 
             margin-bottom: 50px; 
-            margin-top: 20px; 
+            margin-top: 15px; 
         }
 
         .hero-content { flex: 1; }
@@ -164,10 +164,9 @@
 <div class="container">
     <header class="brand-header">
         <img src="logo-club21.png" alt="Logo Club 21" class="brand-logo" onerror="this.style.display='none'">
-        <h2 style="color:var(--azul-noche); letter-spacing: 1px;">CLUB 21</h2>
+        <h2 style="color:var(--azul-noche); letter-spacing: 1.5px; font-size: 1.8rem;">CLUB 21</h2>
     </header>
 
-    <!-- SECCIÓN HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>Evolución Tecnológica con Propósito Humano.</h1>
@@ -179,14 +178,12 @@
         </div>
     </section>
 
-    <!-- SECCIÓN INFORMACIÓN -->
     <section class="glass-card">
         <h2>Sistemas de Memoria Continua: Agentes de IA que no olvidan.</h2>
         <p>El gran defecto de la inteligencia artificial convencional es la desconexión: al cerrar la sesión, la experiencia se desvanece. En Club 21 rompemos ese límite mediante una arquitectura de datos horizontal que dota a nuestros agentes de una memoria a largo plazo real.</p>
         <p>Diseñamos asistentes capaces de recordar directrices complejas, bases documentales completas e historiales compartidos. Una infraestructura robusta que evoluciona junto a vos.</p>
     </section>
 
-    <!-- CONSOLA DE GIDEON -->
     <section class="gideon-panel" id="gideon-sec">
         <h2>Consola de Comando Interactiva</h2>
         <p>Experimenta el soporte por voz avanzado de Gideon. Arquitectura agencial diseñada para resolver directrices complejas mediante diálogo fluido y contextual.</p>
@@ -200,12 +197,11 @@
         <div class="gideon-status" id="gideon-txt">● AGENTE ONLINE // CONEXIÓN ESTABLE POR VOZ</div>
         <div class="gideon-transcript" id="gideon-sub">Presiona "Iniciar Canal de Voz" para activar el enlace de audio.</div>
         <div>
-            <button class="btn btn-gideon" id="btn-audio" onclick="hablarGideon()">Iniciar Canal de Voz</button>
-            <button class="btn btn-mic" id="btn-mic" onclick="escucharUsuario()">Hablar con Gideon</button>
+            <button type="button" class="btn btn-gideon" id="btn-audio" onclick="hablarGideon()">Iniciar Canal de Voz</button>
+            <button type="button" class="btn btn-mic" id="btn-mic" onclick="escucharUsuario()">Hablar con Gideon</button>
         </div>
     </section>
 
-    <!-- SECCIÓN SERVICIOS -->
     <section class="services-grid">
         <div class="mini-card">
             <h3>Soluciones a Medida & Integración PyME</h3>
@@ -219,7 +215,6 @@
         </div>
     </section>
 
-    <!-- FORMULARIO COMERCIAL CONECTADO A SUPABASE --> 
     <section class="glass-card" id="formulario-b2b" style="margin-top:40px;">
         <h2 style="text-align:center; margin-bottom:20px;">Iniciar Consulta Comercial</h2>
         
